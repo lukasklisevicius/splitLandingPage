@@ -37,12 +37,12 @@ h1 {
     text-transform: uppercase;
 }
 
-.split.left.btn:hover {
-    background-color: rgba(87,8,236,1);
-    border-color: rgba(87,8,236,1) ;
+.split.left .btn:hover {
+    background-color: rgb(183, 8, 236);
+    border-color: rgb(183, 8, 236) ;
 }
 
-.split.right.btn:hover {
+.split.right .btn:hover {
     background-color: rgb(28,122,28);
     border-color: rgb(28,122,28);
 }
@@ -88,3 +88,32 @@ h1 {
     height: 100%;
     background-color: rgba(3,43,43,0.8);
 }
+
+.split.right, .split.left, .split.right::before, .split.left::before {
+    transition: all 1s ease-in;
+}
+
+.hover-left .left {
+    width: 75%;
+}
+.hover-left .right {
+    width: 25%;
+}
+
+.hover-right .right {
+    width: 75%;
+}
+.hover-right .left {
+    width: 25%;
+}
+
+ @media(max-width: 800px) {
+     h1 {
+         font-size: 2rem;
+        }
+        .btn {
+            padding: 1.2rem;
+            width: 12rem;
+
+        }
+ }
